@@ -30,7 +30,8 @@ services:
       WEBAPOLLO_DB_DIALECT: "org.hibernate.dialect.PostgresPlusDialect"
       WEBAPOLLO_DB_URI: "jdbc:postgresql://db/postgres"
     volumes_from:
-        - "galaxy:ro"
+        - "galaxy:rw"
+    command: "chmod 777 /apollo-data"
   apollo_db:
     image: postgres
     environment:
