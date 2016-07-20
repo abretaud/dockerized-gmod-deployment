@@ -95,9 +95,6 @@ services:
       BASE_URL: "http://localhost:8080/tripal"
       BASE_URL_PROTO: "http://"
       # FIXME Deprecated ENV var added for compatibility: https://docs.docker.com/compose/link-env-deprecated/
-      POSTGRES_PORT_5432_TCP_ADDR: postgres
-      POSTGRES_PORT_5432_TCP_PORT: 5432
-      POSTGRES_PORT_5432_TCP: tcp://postgres:5432
-      POSTGRES_ENV_POSTGRES_PASSWORD: password
+      DB_PASS: password
     ports:
       - "8080:80"
